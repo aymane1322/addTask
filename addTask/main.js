@@ -33,6 +33,7 @@ let addTask = document
       taskDiv.appendChild(deletButton);
       taskes.appendChild(taskDiv);
       window.localStorage.data = taskes.innerHTML;
+      inputeValue = "";
     }
   });
 taskes.addEventListener("click", (e) => {
