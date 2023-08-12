@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: rgb(38, 37, 37);
+  flex-direction: column;
+  background-image: url(1.jpg);
+}
+#text {
+  width: 80%;
+  height: 50px;
+  background-color: beige;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0 10px;
+}
+#button {
+  margin-left: 10px;
+  width: 120px;
+  height: 50px;
+  background-color: rgb(128, 222, 40);
+  border-radius: 5px;
+  font-weight: 900;
+  font-size: 15px;
+  cursor: pointer;
+  z-index: 5;
+}
+big {
+  z-index: 1;
+  position: absolute;
+  top: 2px;
+  right: 87px;
+  font-size: 40px;
+  animation: translationMouvement 1s infinite ease-in-out;
+}
+.buttonContainer {
+  position: relative;
+}
+form {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.taskes {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  height: 650px;
+  width: 90%;
+  overflow: scroll;
+  padding: 10px;
+  position: relative;
+  background-color: rgba(49, 52, 52, 0.8); /* Use rgba to set opacity */
+}
+.taskDiv {
+  background-color: rgb(88, 104, 104 , 0.5);
+  width: 98%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  font-size: 23px;
+  border-radius: 10px;
+  color: rgb(219, 222, 221);
+  margin: 5px 0;
+}
+.taskes::-webkit-scrollbar {
+  display: none;
+}
+@keyframes translationMouvement {
+  0% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(1px);
+  }
+}
+.taskP {
+  overflow: auto;
+  max-height: 200px; /* Example: Set a maximum height to trigger scrolling */
+  width: 95%;
+}
+.delete {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(200, 59, 59);
+  color: rgb(15, 14, 11);
+  font-size: 20px;
+  cursor: pointer;
+}
+.Clear {
+  margin-top: 15px;
+  width: 40%;
+  height: 40px;
+  font-weight: bolder;
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.Clear:hover {
+  background-color: rgb(245, 7, 7);
+}
+.done {
+  background-color: rgb(10, 32, 52);
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.alert{
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: rgb(118, 106, 67);
+}
+.alert button{
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(65, 38, 38);
+  width: 100px;
+}
+.yes{
+color: red;
+}
+.yes:hover{
+  background-color: red;
+  color: wheat;
+}
+.no{
+  color: wheat;
+}
